@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio of Md Khairul Islam, English graduate from Khulna University.">
+  <title>Md Khairul Islam | English Graduate & Teacher</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      color: #263238;
+      background: #f7f9fc;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      border-bottom: 1px solid #e7ebf0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      text-decoration: none;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #17324d;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #455a64;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: #1769aa;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eef5fb, #ffffff);
+      padding: 90px 0 75px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 0.8fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      color: #1769aa;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.3rem, 6vw, 4.3rem);
+      line-height: 1.1;
+      color: #17324d;
+      margin-bottom: 18px;
+    }
+
+    .hero h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: #526875;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      font-size: 1.05rem;
+      color: #52606a;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 28px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(27, 55, 79, 0.12);
+    }
+
+    .profile-photo {
+      width: 190px;
+      height: 190px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 20px;
+      border: 5px solid #ffffff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    .profile-card h3 {
+      color: #17324d;
+      margin-bottom: 4px;
+    }
+
+    .profile-card p {
+      font-size: 0.95rem;
+      color: #607d8b;
+    }
+
+    section {
+      padding: 75px 0;
+    }
+
+    section:nth-of-type(even) {
+      background: #ffffff;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      color: #17324d;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: #607d8b;
+      max-width: 760px;
+      margin-bottom: 35px;
+    }
+
+    .about-text {
+      max-width: 900px;
+      font-size: 1.03rem;
+      color: #455a64;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 26px;
+      border-radius: 16px;
+      border: 1px solid #e6edf3;
+      box-shadow: 0 5px 18px rgba(30, 60, 80, 0.05);
+    }
+
+    section:nth-of-type(even) .card {
+      background: #f9fbfd;
+    }
+
+    .card h3 {
+      color: #17324d;
+      margin-bottom: 9px;
+    }
+
+    .card p {
+      color: #596b75;
+    }
+
+    .date {
+      color: #1769aa;
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 7px;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .skill {
+      background: #ffffff;
+      border: 1px solid #e3ebf2;
+      padding: 19px;
+      border-radius: 12px;
+    }
+
+    .skill strong {
+      display: block;
+      color: #17324d;
+      margin-bottom: 5px;
+    }
+
+    .skill span {
+      color: #607d8b;
+      font-size: 0.94rem;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: #f8fafc;
+      border: 1px solid #e3ebf2;
+      padding: 19px;
+      border-radius: 13px;
+    }
+
+    .contact-icon {
+      font-size: 1.35rem;
+      min-width: 28px;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: #17324d;
+      margin-bottom: 3px;
+    }
+
+    .contact-item a {
+      color: #1769aa;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .contact-item a:hover {
+      text-decoration: underline;
+    }
+
+    .research-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 16px;
+      border-radius: 8px;
+      background: #1769aa;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .research-link:hover {
+      background: #125789;
+    }
+
+    footer {
+      background: #17324d;
+      color: #dce7ef;
+      text-align: center;
+      padding: 28px 0;
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .cards,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .skills {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-inner {
+        flex-direction: column;
+        justify-content: center;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .skills {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 0 55px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .profile-photo {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="container nav-inner">
+      <a class="brand" href="#home">Md Khairul Islam</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">English Graduate | Teaching & Academic Development</div>
+        <h1>Md Khairul Islam</h1>
+        <h2>B.A. (Honours) & M.A. in English, Khulna University</h2>
+        <p>
+          An English graduate with a strong academic foundation in English language and literature,
+          good communication and presentation skills, and a commitment to student-centered learning
+          and continuous professional development.
+        </p>
+      </div>
+
+      <div class="profile-card">
+        <!-- Keep Image.jpg in the same folder as this index.html file -->
+        <img src="https://raw.githubusercontent.com/mdkhairulislam163/portfolio/main/Image.jpg" class="profile-photo" alt="Md Khairul Islam">
+        <h3>English Graduate</h3>
+        <p>Khulna University</p>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="about-text">
+        An English graduate with a B.A. (Honours) and M.A. in English from Khulna University.
+        Possesses a strong academic foundation in English language and literature, with good
+        communication, presentation, and academic writing skills. Completed a Computer Fundamental
+        and MS Office course from EDGE, developing essential computer and digital skills.
+        Responsible, adaptable, and committed to continuous learning and professional development.
+      </p>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <p class="section-intro">Academic background in English language and literature, supported by a strong secondary education.</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="date">2026</div>
+          <h3>M.A. in English</h3>
+          <p><strong>Khulna University</strong></p>
+          <p>CGPA: 3.23 / 4.00</p>
+          <p>Duration: 1 year</p>
+        </div>
+
+        <div class="card">
+          <div class="date">2025</div>
+          <h3>B.A. (Honours) in English</h3>
+          <p><strong>Khulna University</strong></p>
+          <p>CGPA: 3.05 / 4.00</p>
+          <p>Duration: 4 years</p>
+        </div>
+
+        <div class="card">
+          <div class="date">2019</div>
+          <h3>Higher Secondary Certificate (HSC)</h3>
+          <p><strong>Paikgacha Govt. College</strong></p>
+          <p>Group: Humanities</p>
+          <p>GPA: 4.83 / 5.00</p>
+        </div>
+
+        <div class="card">
+          <div class="date">2017</div>
+          <h3>Secondary School Certificate (SSC)</h3>
+          <p><strong>Paikgacha Govt. High School</strong></p>
+          <p>Group: Science</p>
+          <p>GPA: 4.91 / 5.00</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-intro">Academic, communication, digital, and classroom-related skills.</p>
+
+      <div class="skills">
+        <div class="skill">
+          <strong>MS Word</strong>
+          <span>Professional document preparation, formatting, report writing, tables, page layout, and referencing.</span>
+        </div>
+
+        <div class="skill">
+          <strong>MS PowerPoint</strong>
+          <span>Academic presentations, slide organization, visual presentation, and classroom materials.</span>
+        </div>
+
+        <div class="skill">
+          <strong>MS Excel</strong>
+          <span>Basic spreadsheet preparation, data organization, formatting, and academic record management.</span>
+        </div>
+
+        <div class="skill">
+          <strong>English Language & Communication</strong>
+          <span>Clear written and oral communication with an academic focus.</span>
+        </div>
+
+        <div class="skill">
+          <strong>English Grammar & Writing</strong>
+          <span>Grammar, academic writing, composition, editing, and language development.</span>
+        </div>
+
+        <div class="skill">
+          <strong>Presentation Skills</strong>
+          <span>Organizing and presenting academic information clearly and effectively.</span>
+        </div>
+
+        <div class="skill">
+          <strong>Classroom Management</strong>
+          <span>Maintaining an organized and supportive learning environment.</span>
+        </div>
+
+        <div class="skill">
+          <strong>Student Engagement</strong>
+          <span>Supporting participation and creating an interactive learning environment.</span>
+        </div>
+
+        <div class="skill">
+          <strong>Academic Guidance</strong>
+          <span>Helping students understand lessons, improve skills, and develop academically.</span>
+        </div>
+
+        <div class="skill">
+          <strong>Research & Critical Analysis</strong>
+          <span>Academic research, textual analysis, critical reading, and interpretation.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="research">
+    <div class="container">
+      <h2 class="section-title">Research</h2>
+      <p class="section-intro">Academic research completed as part of the undergraduate degree.</p>
+
+      <div class="card">
+        <div class="date">B.A. (Honours) Research Project</div>
+        <h3>Power Dynamics in Julian Barnes' The Sense of an Ending: A Postmodern Approach</h3>
+        <p>
+          Submitted to the English Discipline, Khulna University, in Partial Fulfillment of the
+          Requirements for the Degree of Bachelor of Arts (BA).
+        </p>
+        <a class="research-link" href="https://github.com/mdkhairulislam163/Project.git" target="_blank" rel="noopener noreferrer">
+          View Research Project
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="training">
+    <div class="container">
+      <h2 class="section-title">Training</h2>
+
+      <div class="card">
+        <div class="date">February 2025 to May 2025 | 60 Hours</div>
+        <h3>Computer Fundamental and MS Office</h3>
+        <p>
+          Conducted by the Department of Computer Science and Engineering (CSE), Khulna University,
+          under the Enhancing Digital Government and Economy (EDGE) Project, Bangladesh Computer
+          Council, ICT Division.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <div class="container">
+      <h2 class="section-title">Languages</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Bangla</h3>
+          <p>Reading: Excellent | Writing: Excellent | Speaking: Excellent</p>
+        </div>
+
+        <div class="card">
+          <h3>English</h3>
+          <p>Reading: Excellent | Writing: Excellent | Speaking: Good</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-intro">Feel free to contact me for professional and academic opportunities.</p>
+
+      <div class="contact-box">
+
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <strong>Phone</strong>
+            <a href="tel:+8801748545814">01748545814</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <strong>Email</strong>
+            <a href="mailto:mdkhairulislam1603@gmail.com">mdkhairulislam1603@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">in</div>
+          <div>
+            <strong>LinkedIn</strong>
+            <a href="https://www.linkedin.com/in/md-khairul-islam-980590347/" target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/md-khairul-islam-980590347
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">◉</div>
+          <div>
+            <strong>GitHub</strong>
+            <a href="https://github.com/mdkhairulislam163" target="_blank" rel="noopener noreferrer">
+              github.com/mdkhairulislam163
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Md Khairul Islam. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
